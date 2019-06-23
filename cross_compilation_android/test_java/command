@@ -1,0 +1,8 @@
+ g++ -fPIC common.cpp lbf.cpp npdmodel.cpp npddetect.cpp rf.cpp detect_wrap.cxx -shared -o libdetect.so \
+-I/usr/include/opencv2 -I/usr/include/opencv -L/usr/lib/x86_64-linux-gnu  -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux \
+-lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs -fopenmp -lpthread
+
+
+g++ -fPIC common.cpp lbf.cpp npdmodel.cpp npddetect.cpp rf.cpp detect_wrap.cxx -shared -o libdetect.so \
+-I/usr/local/include/opencv2 -I/usr/local/include/opencv -L/usr/local/lib  -I/usr/lib/jvm/java-8-oracle/include -I/usr/lib/jvm/java-8-oracle/include/linux \
+-lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs -fopenmp -lpthread

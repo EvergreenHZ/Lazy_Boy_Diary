@@ -1,0 +1,3 @@
+/home/huaizhi/Lazy_Boy_Diary/cross_compilation_android/test_python_npd_3000fps/build/CMakeFiles/edit_cache.dir
+/home/huaizhi/Lazy_Boy_Diary/cross_compilation_android/test_python_npd_3000fps/build/CMakeFiles/rebuild_cache.dir
+/home/huaizhi/Lazy_Boy_Diary/cross_compilation_android/test_python_npd_3000fps/build/CMakeFiles/_detect.dir

@@ -1,0 +1,178 @@
+#+TITLE: ORG-MODE LEARNING
+#+DATE: <2018-09-24 Mon>
+
+* org-mode structure
+Text in org is structured by headings, denoted by lines starting with
+one or more * so we are currently in a section!
+
+** A subheading
+Starts with an extra * and so on
+
+** navigation
+Headings can be expanded or collapsed by moving to the (sub)heading
+and pressing TAB. S-TAB cycles all headings. You can jump to next and
+previous headings with C-c C-n and C-c C-p respectively.
+
+You can move headings up and down to reorder them with the arrow keys,
+using M-up or M-down. You can change the level of headings with M-left
+and M-right (and use M-S-left and M-S-right to also change the levels
+of and subheadings).
+
+*** lists
+*** bullet lists
+ - bullet lists can be created like this (start a line with one or
+   more space and a -
+ - pressing M-RET gives you a new bullet
+ - we might also like nested bullets
+   - like this one (I pressed M-RET TAB to indent it)
+   - and another (M-RET now indents to the new level)
+ - the nice thing is that for long lines of text, emacs wraps them
+   so that they line up with the bullet
+ - you can also reorder list items and change indentation using
+   M-up or M-down just like with section headings
+ - you can change bullet style using S-left and S-right
+
+*** numbered lists
+ 1) numbered lists are also possible
+ 2) M-RET gives me a new number
+
+*** checklists [0/5]
+ - [ ] we can even have check lists
+ - [ ] M-S-RET gives a new item with a check box
+ - [ ] C-c C-c check/unchecks a box
+ - [ ] you can have sub items
+   + [ ] like this
+   + [ ] that can be checked off individually
+ - [ ] and you can track the number of items by adding [0/0] to the end
+   of a line above a checklist - this updates when you check items off
+
+*** definition lists
+ - definition lists :: these are useful sometimes
+ - item 2 :: M-RET again gives another item, and long lines wrap in a
+      tidy way underneath the definition
+
+
+* Formatting text
+** Simple formatting
+You can apply simple formatting to your text by enclosing words in
+special characters. These include
+ - /italicised text/
+ - *bold text*
+ - _underlines_
+ - =literal text=
+ - ~code~ (generally appears the same as literal text)
+
+** Formatted blocks of text
+For longer pieces of text you can enclose the text in blocks marking
+it as a specific sort of text. I commonly use these ones
+
+#+BEGIN_EXAMPLE
+This is an example block into which you can type text that you don't want org to mess with like a [[link]]. This will typically be rendered in a monospace font when exported.
+#+END_EXAMPLE
+
+#+BEGIN_QUOTE
+This block encloses text that you want to appear as a quotation.
+#+END_QUOTE
+
+#+BEGIN_CENTER
+This text will be centred when it is exported.
+#+END_CENTER
+
+You can save time typing out the block wrapper by using shortcuts. Go
+to the start of a new line and type <e and press TAB and it will
+expand to an example block. The same works for <q for quote and <c for
+centre.
+
+** LaTeX
+Org-mode does a good job of understanding snippets of LaTeX (a
+[[https://www.latex-project.org/][powerful typesetting language]] used in scientific and other technical
+documents). For example, it will correctly export simple superscripts
+x^2 or subscripts x_0 or symbols like \alpha, \beta, \gamma.
+
+Org also understands more complex LaTeX like this
+
+\begin{eqnarray}
+x^2 + \left(\frac{y}{z}\right)^4 = 0
+\end{eqnarray}
+
+but for longer bits of LaTeX it is better to use a LaTeX block. You
+start one with <l and TAB
+
+#+BEGIN_LaTeX
+LaTeX code goes here
+#+END_LaTeX
+
+** Source code blocks
+It is also handy to include source code in your notes - on a new line
+type <s and TAB to create a source block. You can tell org what type
+of code is contained - in this case we'll put in some simple shell
+code, so well put "sh" at the top of the block.
+
+#+BEGIN_SRC sh
+  echo "Hello $USER! Today is `date`"
+  exit
+#+END_SRC
+
+You can get org to syntax highlight the text in the block by adding
+the following to your [[http://pragmaticemacs.com/emacs/editing-your-emacs-config-file/][emacs config file]] (without the source block
+wrapper of course).
+
+#+BEGIN_SRC elisp
+;;syntax highlight code blocks
+(setq org-src-fontify-natively t)
+#+END_SRC
+
+What is more, when the cursor is inside a SRC block, you can use C-c '
+to create a new temporary buffer in the major mode of the programming
+language you have specified. Type some code in, and then type C-c '
+again to come back to this buffer.
+
+** Executing source code blocks
+Org-mode can execute your source code blocks and add the output to
+your file. This part of org-mode is called babel. I'll write more
+about this later, but it is too cool not to mention here.
+
+For example, take the simple code block we had above:
+
+#+BEGIN_SRC sh
+  echo "Hello $USER! Today is `date`"
+  exit
+#+END_SRC
+
+Put the cursor inside the block and hit C-c C-c to execute it. You
+will be asked to confirm and then you should see the output appear
+like this:
+
+#+RESULTS:
+#+begin_example
+Hello bjm! Today is Fri 25 Sep 2015 15:03:12 BST
+#+end_example
+
+You can do much more with this, like reading input data from a table
+in the same file, creating images that appear in the file, extracting
+(tangling) all the code snippets into one or more files to be executed
+separately, and much more. [[http://orgmode.org/worg/org-contrib/babel/intro.html][Here are some nice examples]].
+
+You can tell org-mode which programming languages to support by adding
+something like the following to your [[http://pragmaticemacs.com/emacs/editing-your-emacs-config-file/][emacs config file]]:
+
+#+BEGIN_SRC elisp
+;; Some initial languages we want org-babel to support
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (sh . t)
+   (python . t)
+   (R . t)
+   (ditaa . t)
+   (perl . t)
+   (gnuplot t)
+   ))
+#+END_SRC
+
+
+*Hello*
+_HELLO_
+/HELLO/
+=HELLO=
+~HELLO~

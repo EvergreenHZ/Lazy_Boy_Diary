@@ -1,0 +1,3 @@
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_shared/build/CMakeFiles/rebuild_cache.dir
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_shared/build/CMakeFiles/edit_cache.dir
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_shared/build/CMakeFiles/testStudent.dir

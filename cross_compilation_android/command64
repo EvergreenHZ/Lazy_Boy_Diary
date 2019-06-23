@@ -1,0 +1,53 @@
+64:
+./make-standalonetoolchain.sh --platform=android-26 --install-dir=standalonetoolchain --ndk-dir=$NDK --toolchain=aarch64-linux-android-4.9
+./aarch64-linux-android-g++ -fPIC npddetect.cpp npdmodel.cpp detect_wrap.cxx -shared -o libdetect.so -I/home/tristian/Android/Sdk/ndk-bundle/build/tools/standalonetoolchain/sysroot/usr/include  -I/home/tristian/Android/OpenCV-android-sdk/sdk/native/jni/include -L/home/tristian/Android/OpenCV-android-sdk/sdk/native/libs/arm64-v8a -lopencv_java3
+
+
+./aarch64-linux-android-g++ -fPIC ./src/npddetect.cpp ./src/npdmodel.cpp ./src/detect_wrap.cxx -shared -o libdetect.so 
+		-I/home/tristian/Android/Sdk/ndk-bundle/build/tools/standalonetoolchain/sysroot/usr/include  \
+		-I/home/tristian/Android/OpenCV-android-sdk/sdk/native/jni/include \
+                -L/home/tristian/Android/Sdk/ndk-bundle/build/tools/standalonetoolchain/aarch64-linux-android/lib64 \
+		-L/home/tristian/Android/OpenCV-android-sdk/sdk/native/libs/arm64-v8a -lopencv_java3 -fopenmp
+
+
+swig -c++ -java -package com.zjgsu.face -outdir com/zjgsu/face/ ./jni/detect.i
+
+g++ test.cpp -O2 -funroll-loops -fopenmp  // compile, link
+./aarch64-linux-android-g++ -fPIC npddetect.cpp npdmodel.cpp detect_wrap.cxx -shared -o libdetect.so \
+		-I/home/tristian/Android/Sdk/ndk-bundle/build/tools/standalonetoolchain/sysroot/usr/include  \
+		-I/home/tristian/Android/OpenCV-android-sdk/sdk/native/jni/include \
+		-L/home/tristian/Android/OpenCV-android-sdk/sdk/native/libs/arm64-v8a -lopencv_java3
+
+
+32:
+make-standalonetoolchain.sh --platform=android-14 --install-dir=standalone-toolchain --ndk-dir=$ANDROID_NDK_PATH
+export PATH=$TOOLCH/standalonetoolchain/bin:$PATH
+arm-linux-androideabi-g++ -o test-new test.cpp --sysroot=$TOOLCH/sysroot -I$TOOLCH/lib/gcc/arm-linux-androideabi/4.6.x-google/include -I$TOOLCH/lib/gcc/arm-linux-androideabi/4.6.x-google/include-fixed -I$TOOLCH/arm-linux-androideabi/include/c++/4.6 -I$TOOLCH/arm-linux-androideabi/include/c++/4.6/arm-linux-androideabi -I$TOOLCH/sysroot/usr/include
+
+swig -c++ -java -package com.zjgsu.face -outdir com/zjgsu/face ./jni/detect.i
+
+make-standalonetoolchain.sh --platform=android-14 --install-dir=standalone-toolchain --ndk-dir=$ANDROID_NDK_PATH
+export PATH=$TOOLCH/standalone-toolchain/bin:$PATH
+arm-linux-androideabi-g++ -o test-new test.cpp --sysroot=$TOOLCH/sysroot -I$TOOLCH/lib/gcc/arm-linux-androideabi/4.6.x-google/include -I$TOOLCH/lib/gcc/arm-linux-androideabi/4.6.x-google/include-fixed -I$TOOLCH/arm-linux-androideabi/include/c++/4.6 -I$TOOLCH/arm-linux-androideabi/include/c++/4.6/arm-linux-androideabi -I$TOOLCH/sysroot/usr/include
+
+command32:
+./arm-linux-androideabi-g++ -fPIC npddetect.cpp npdmodel.cpp detect_wrap.cxx -shared -o libdetect.so -I"{JAVA_HOME}/include" -I"${JAVA_HOME}/include/linux" -I/home/tristian/Android/OpenCV-android-sdk/sdk/native/jni/include -L/home/tristian/Android/OpenCV-android-sdk/sdk/native/libs/armeabi -lopencv_java3
+
+/home/tristian/Android/Sdk/ndk-bundle/build/tools/standalonetoolchain/bin
+
+./arm-linux-androideabi-g++ -fPIC npddetect.cpp npdmodel.cpp detect_wrap.cxx -shared -o libdetect.so \
+		-I/home/tristian/Android/Sdk/ndk-bundle/build/tools/standalonetoolchain/sysroot/usr/include \
+		-I/home/tristian/Android/OpenCV-android-sdk/sdk/native/jni/include \
+		-L/home/tristian/Android/OpenCV-android-sdk/sdk/native/libs/armeabi -lopencv_java3
+
+
+64
+./make-standalonetoolchain.sh --platform=android-26 --install-dir=standalonetoolchain --ndk-dir=$NDK --toolchain=aarch64-linux-android-4.9
+
+swig -c++ -java -package com.zjgsu.face -outdir com/zjgsu/face/ ./jni/detect.i
+./aarch64-linux-android-g++ -fPIC -O2 common.cpp lbf.cpp rf.cpp npddetect.cpp npdmodel.cpp detect_wrap.cxx -shared -o libdetect.so \
+		-I/home/tristian/Android/Sdk/ndk-bundle/build/tools/standalonetoolchain/sysroot/usr/include  \
+		-I/home/tristian/Android/OpenCV-android-sdk/sdk/native/jni/include \
+                -I/home/tristian/Android/Sdk/ndk-bundle/build/tools/standalonetoolchain/lib/gcc/aarch64-linux-android/4.9.x/include \
+                -L/home/tristian/Android/Sdk/ndk-bundle/build/tools/standalonetoolchain/aarch64-linux-android/lib64 \
+		-L/home/tristian/Android/OpenCV-android-sdk/sdk/native/libs/arm64-v8a -lopencv_java3 -fopenmp

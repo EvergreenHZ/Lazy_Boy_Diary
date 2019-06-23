@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -O2 -fopenmp  -shared -Wl,-soname,libdetect.so -o ../lib/libdetect.so CMakeFiles/detect.dir/jni/detect_wrap.cxx.o CMakeFiles/detect.dir/jni/common.cpp.o CMakeFiles/detect.dir/jni/lbf.cpp.o CMakeFiles/detect.dir/jni/npddetect.cpp.o CMakeFiles/detect.dir/jni/npdmodel.cpp.o CMakeFiles/detect.dir/jni/rf.cpp.o  -L/usr/lib/jni 

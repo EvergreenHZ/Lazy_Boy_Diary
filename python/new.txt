@@ -1,0 +1,135 @@
+item {
+	name: "Adidas"
+	label: 0
+	display_name: "Adidas"
+}
+item {
+	name: "Apple"
+	label: 1
+	display_name: "Apple"
+}
+item {
+	name: "BMW"
+	label: 2
+	display_name: "BMW"
+}
+item {
+	name: "Citroen"
+	label: 3
+	display_name: "Citroen"
+}
+item {
+	name: "Cocacola"
+	label: 4
+	display_name: "Cocacola"
+}
+item {
+	name: "DHL"
+	label: 5
+	display_name: "DHL"
+}
+item {
+	name: "Fedex"
+	label: 6
+	display_name: "Fedex"
+}
+item {
+	name: "Ferrari"
+	label: 7
+	display_name: "Ferrari"
+}
+item {
+	name: "Ford"
+	label: 8
+	display_name: "Ford"
+}
+item {
+	name: "Google"
+	label: 9
+	display_name: "Google"
+}
+item {
+	name: "Heineken"
+	label: 10
+	display_name: "Heineken"
+}
+item {
+	name: "HP"
+	label: 11
+	display_name: "HP"
+}
+item {
+	name: "Intel"
+	label: 12
+	display_name: "Intel"
+}
+item {
+	name: "McDonalds"
+	label: 13
+	display_name: "McDonalds"
+}
+item {
+	name: "Mini"
+	label: 14
+	display_name: "Mini"
+}
+item {
+	name: "Nbc"
+	label: 15
+	display_name: "Nbc"
+}
+item {
+	name: "Nike"
+	label: 16
+	display_name: "Nike"
+}
+item {
+	name: "Pepsi"
+	label: 17
+	display_name: "Pepsi"
+}
+item {
+	name: "Porsche"
+	label: 18
+	display_name: "Porsche"
+}
+item {
+	name: "Puma"
+	label: 19
+	display_name: "Puma"
+}
+item {
+	name: "RedBull"
+	label: 20
+	display_name: "RedBull"
+}
+item {
+	name: "Sprite"
+	label: 21
+	display_name: "Sprite"
+}
+item {
+	name: "Starbucks"
+	label: 22
+	display_name: "Starbucks"
+}
+item {
+	name: "Texaco"
+	label: 23
+	display_name: "Texaco"
+}
+item {
+	name: "Unicef"
+	label: 24
+	display_name: "Unicef"
+}
+item {
+	name: "Vodafone"
+	label: 25
+	display_name: "Vodafone"
+}
+item {
+	name: "Yahoo"
+	label: 26
+	display_name: "Yahoo"
+}

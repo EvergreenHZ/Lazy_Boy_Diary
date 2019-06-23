@@ -1,0 +1,3 @@
+/home/huaizhi/Lazy_Boy_Diary/swig/test_python/build/CMakeFiles/edit_cache.dir
+/home/huaizhi/Lazy_Boy_Diary/swig/test_python/build/CMakeFiles/rebuild_cache.dir
+/home/huaizhi/Lazy_Boy_Diary/swig/test_python/build/CMakeFiles/_detect.so.dir

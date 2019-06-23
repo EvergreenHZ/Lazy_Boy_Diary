@@ -1,0 +1,7 @@
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_static/build/CMakeFiles/install.dir
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_static/build/CMakeFiles/list_install_components.dir
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_static/build/CMakeFiles/rebuild_cache.dir
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_static/build/CMakeFiles/edit_cache.dir
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_static/build/CMakeFiles/testStudent.dir
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_static/build/CMakeFiles/install/strip.dir
+/home/huaizhi/Desktop/tool_learning/exploringBB/extras/cmake/studentlib_static/build/CMakeFiles/install/local.dir

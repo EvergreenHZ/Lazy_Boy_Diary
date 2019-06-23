@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tristian/Lazy_Boy_Diary/cmake/track/src/track.cpp
+iostream
+-
+opencv2/opencv.hpp
+-
+opencv2/tracking.hpp
+-
+opencv2/tracking/tracking.hpp
+-
+opencv2/core/ocl.hpp
+-
+

@@ -1,0 +1,3 @@
+/home/tristian/Lazy_Boy_Diary/cmake/bs/build/CMakeFiles/rebuild_cache.dir
+/home/tristian/Lazy_Boy_Diary/cmake/bs/build/CMakeFiles/bs.dir
+/home/tristian/Lazy_Boy_Diary/cmake/bs/build/CMakeFiles/edit_cache.dir
