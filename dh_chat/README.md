@@ -18,7 +18,7 @@ This is the first Draft of dh_caht Protocal and we use json to communicate betwe
 # Details <a name="details"></a>
 We have to make sure that the json data format will never be empty, which means the "cmd" field always exists.
 
-## Register <a name="register"</a>
+## Register <a name="register"></a>
 ```javascript
 {
         "cmd" : "REGISTER_GRP4",
@@ -81,5 +81,6 @@ or
 }
 ```
 
-P.S.
+P.S. 
+
 *All* the data types are _strings_.
