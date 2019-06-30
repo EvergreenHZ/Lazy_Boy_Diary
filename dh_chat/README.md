@@ -1,14 +1,14 @@
 TOC
 ====
 
-1. [Introduction][#introduction]
-2. [Details][#details]
-2.1 [Register][#register]
-2.2 [Login][#login]
-2.3 [AddFriend][#add-friend]
-2.4 [PersonalChat][#personal-chat]
-2.5 [FileTransfer][#file-transfer]
-2.6 [GroupChat][#group-chat]
+1. [Introduction](#introduction)
+2. [Details](#details)
+2.1 [Register](#register)
+2.2 [Login](#login)
+2.3 [AddFriend](#add-friend)
+2.4 [PersonalChat](#personal-chat)
+2.5 [FileTransfer](#file-transfer)
+2.6 [GroupChat](#group-chat)
 
 
 # Introduction <a name="introduction"></a>
