@@ -37,6 +37,15 @@ or
 }
 ```
 
+
+return:
+```javascript
+{
+        "cmd" : "REGISTER_GRP4",
+        "result" : "true",
+}
+```
+
 ## Login <a name="login"></a>
 ```javascript
 {
@@ -46,11 +55,29 @@ or
 }
 ```
 
+
+return:
+```javascript
+{
+        "cmd" : "LOGIN",
+        "result" : "flase",
+}
+```
+
 ## AddFriend <a name="add-friend"></a>
 ```javascript
 {
         "cmd" : "ADDFRIEND",
-        "peer_account" : "..." ,
+        "from_account" : "...",
+        "to_account" : "..." ,
+}
+```
+
+return:
+```javascript
+{
+        "cmd" : "LOGIN",
+        "result" : "flase",
 }
 ```
 
@@ -58,7 +85,8 @@ or
 ```javascript
 {
         "cmd" : "PERSONALCHAT",
-        "peer_account" : "...",
+        "from_account" : "...",
+        "to_account" : "...",
         "message" : "...",
 }
 ```
@@ -67,6 +95,8 @@ or
 ```javascript
 {
         "cmd" : "FILETRANSFER",
+        "from_account" : "...",
+        "to_account" : "...",
         "filename" : "...",
         "content" : "..." ,
 }
@@ -76,6 +106,7 @@ or
 ```javascript
 {
         "cmd" : "GROUPCHAT",
+        "from_account" : "...",
         "group_id": "...",
         "message" : "...",
 }
